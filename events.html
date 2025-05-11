@@ -93,19 +93,21 @@
               <div class="event-card__content">
                 <h3 class="event-card__title">Unlock the Power of Data and AI</h3>
                 <div class="event-card__meta">
-                  <p class="event-card__date"> <i class="far fa-calendar-alt"> </i>December 18, 2024</p>
+                  <p class="event-card__date"><i class="far fa-calendar-alt"></i>December 18, 2024</p>
                   <p class="event-card__platform"><i class="fas fa-map-marker-alt"></i>Room D7, ENSA</p>
                 </div>
-                <p class="event-card__speakers"> <strong>Speakers: </strong>Hafid (AI), Marwa (Data)</p>
+                <p class="event-card__speakers"><strong>Speakers:</strong>Hafid (AI), Marwa (Data)</p>
                 <p class="event-card__description">An introductory session to the fascinating worlds of Data and Artificial Intelligence.</p><a class="btn btn-outline event-card__btn" href="#">Learn More</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="container">
+      <section class="events-gallery">
         <h2 class="text-center">Evenement Inserer dynamiquement par JS par connection avec base de donnees</h2>
-        <div id="events-container"></div>
+        <div class="container">
+          <div class="events-grid" id="events-container"></div>
+        </div>
       </section>
       <section class="events-cta">
         <div class="container">
@@ -160,7 +162,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="./js/main.js"></script>
-    <script type="module" src="./js/api-integration.js"></script>
+    <script type="module" src="./ts/api-integration.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         particlesJS("particles-js", {

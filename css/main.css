@@ -428,13 +428,7 @@ template {
 }
 
 [class^=icon-] {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-  vertical-align: -0.125em;
+  font-style: normal;
 }
 
 .icon-code::before {
@@ -455,6 +449,11 @@ template {
 
 .icon-linkedin::before {
   content: "\f0e1";
+  font-family: "Font Awesome 5 Brands";
+}
+
+.icon-instagram::before {
+  content: "\f16d";
   font-family: "Font Awesome 5 Brands";
 }
 
@@ -1587,6 +1586,53 @@ main {
   color: rgba(255, 255, 255, 0.6);
   font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.team-card__social {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.team-card__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(18, 18, 18, 0.6);
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.team-card__social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.team-card__social-link--linkedin {
+  background-color: #0077B5;
+}
+.team-card__social-link--linkedin:hover {
+  background-color: rgb(0, 85.4696132597, 130);
+}
+.team-card__social-link--instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.team-card__social-link--instagram:hover {
+  background: linear-gradient(45deg, rgb(223.5616438356, 122.7397260274, 16.4383561644) 0%, rgb(211.8409090909, 74.9590909091, 27.1590909091) 25%, rgb(178.9960159363, 29.0039840637, 52.2071713147), rgb(160.4686192469, 27.5313807531, 80.2343096234) 75%, rgb(142.7735849057, 18.2264150943, 103.2830188679) 100%);
+}
+.team-card__social-link--twitter {
+  background-color: #1DA1F2;
+}
+.team-card__social-link--twitter:hover {
+  background-color: rgb(11.9665271967, 133.4728033473, 208.0334728033);
+}
+.team-card__social-link--github {
+  background-color: #333;
+}
+.team-card__social-link--github:hover {
+  background-color: rgb(25.5, 25.5, 25.5);
 }
 
 .team-social {
