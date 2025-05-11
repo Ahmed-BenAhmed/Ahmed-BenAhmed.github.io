@@ -228,7 +228,6 @@ const teamMembers = [
         imageSrc: "/public/images/team/sara.png",
         socialMedia: {
             linkedin: "https://linkedin.com/in/sara-mesnaoui",
-            instagram: "https://instagram.com/sara.mesnaoui"
         }
     },
     // Shadow Member
