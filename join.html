@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEC CLUB</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__content"><a class="header__logo" href="/"><span class="header__logo-text">CEC</span><span class="header__logo-text header__logo-text--light">CLUB</span></a>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item"><a class="header__nav-link" href="/">Home</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="about.html">About</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="events.html">Events</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="projects.html">Projects</a></li>
+              <li class="header__nav-item"><a class="header__nav-link" href="contact.html">Contact</a></li>
+              <li class="header__nav-item"><a class="btn btn--primary" href="join.html">Join Us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="join" id="join">
+        <div class="container">
+          <div class="projects-header">
+            <h2 class="section-title">Join Our Community</h2>
+            <p class="section-subtitle">Become part of CEC CLUB and collaborate with like-minded tech enthusiasts</p>
+          </div>
+          <div class="benefits">
+            <h3 class="section-subtitle" style="text-align: center; margin-bottom: 2rem;">Why Join CEC CLUB?</h3>
+            <div class="benefits__grid">
+              <div class="benefit-card"><i class="fas fa-users benefit-card__icon"></i>
+                <h3 class="benefit-card__title">Networking</h3>
+                <p class="benefit-card__text">Connect with students passionate about technology and build lasting professional relationships.</p>
+              </div>
+              <div class="benefit-card"><i class="fas fa-laptop-code benefit-card__icon"></i>
+                <h3 class="benefit-card__title">Skill Development</h3>
+                <p class="benefit-card__text">Enhance your technical skills through workshops, hackathons, and collaborative projects.</p>
+              </div>
+              <div class="benefit-card"><i class="fas fa-briefcase benefit-card__icon"></i>
+                <h3 class="benefit-card__title">Career Opportunities</h3>
+                <p class="benefit-card__text">Gain access to internship and job opportunities through our industry connections.</p>
+              </div>
+              <div class="benefit-card"><i class="fas fa-lightbulb benefit-card__icon"></i>
+                <h3 class="benefit-card__title">Innovation</h3>
+                <p class="benefit-card__text">Work on cutting-edge projects and turn your ideas into reality with team support.</p>
+              </div>
+            </div>
+          </div>
+          <div class="join-form">
+            <div class="join-form__content">
+              <div class="join-form__info">
+                <h2 class="join-form__title">Ready to Join?</h2>
+                <p class="join-form__text">Fill out the application form to become a member of CEC CLUB. We welcome students from all departments who share our passion for technology.</p>
+                <div class="join-form__requirements">
+                  <h3 class="join-form__subtitle">Requirements:</h3>
+                  <ul class="join-form__list">
+                    <li class="join-form__list-item">Currently enrolled at ENSA Berrechid</li>
+                    <li class="join-form__list-item">Interest in technology and learning</li>
+                    <li class="join-form__list-item">Commitment to attend meetings and events</li>
+                    <li class="join-form__list-item">Willingness to collaborate with others</li>
+                  </ul>
+                </div>
+              </div>
+              <form class="join-form__form" id="joinForm">
+                <div class="join-form__group">
+                  <label class="join-form__label" for="join-name">Full Name</label>
+                  <input class="join-form__input" type="text" id="join-name" required>
+                </div>
+                <div class="join-form__group">
+                  <label class="join-form__label" for="join-email">Email</label>
+                  <input class="join-form__input" type="email" id="join-email" required>
+                </div>
+                <div class="join-form__group">
+                  <label class="join-form__label" for="join-major">Major/Department</label>
+                  <input class="join-form__input" type="text" id="join-major" required>
+                </div>
+                <div class="join-form__group">
+                  <label class="join-form__label" for="join-year">Year of Study</label>
+                  <select class="join-form__select" id="join-year" required>
+                    <option value="">Select your year</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                  </select>
+                </div>
+                <div class="join-form__group">
+                  <label class="join-form__label">Technical Interests (Select all that apply)</label>
+                  <div class="join-form__checkboxes">
+                    <label class="join-form__checkbox-label">
+                      <input type="checkbox" name="interests" value="web">Web Development
+                    </label>
+                    <label class="join-form__checkbox-label">
+                      <input type="checkbox" name="interests" value="mobile">Mobile Development
+                    </label>
+                    <label class="join-form__checkbox-label">
+                      <input type="checkbox" name="interests" value="ai">Artificial Intelligence
+                    </label>
+                    <label class="join-form__checkbox-label">
+                      <input type="checkbox" name="interests" value="data">Data Science
+                    </label>
+                    <label class="join-form__checkbox-label">
+                      <input type="checkbox" name="interests" value="iot">IoT
+                    </label>
+                    <label class="join-form__checkbox-label">
+                      <input type="checkbox" name="interests" value="other">Other
+                    </label>
+                  </div>
+                </div>
+                <div class="join-form__group">
+                  <label class="join-form__label" for="join-experience">Technical Experience (Optional)</label>
+                  <textarea class="join-form__textarea" id="join-experience" rows="4" placeholder="Briefly describe your technical background or experience..."></textarea>
+                </div>
+                <div class="join-form__group">
+                  <label class="join-form__label" for="join-motivation">Why do you want to join CEC CLUB?</label>
+                  <textarea class="join-form__textarea" id="join-motivation" rows="4" required></textarea>
+                </div>
+                <button class="btn btn--primary join-form__submit" type="submit">Submit Application</button>
+              </form>
+            </div>
+          </div>
+          <div class="faq">
+            <h3 class="section-subtitle" style="text-align: center; margin-bottom: 2rem;">Frequently Asked Questions</h3>
+            <div class="faq__accordion">
+              <div class="faq__item">
+                <button class="faq__question">Is there a membership fee?</button>
+                <div class="faq__answer">
+                  <p>No, membership in CEC CLUB is completely free for all ENSA Berrechid students. We believe in making technology education accessible to everyone.</p>
+                </div>
+              </div>
+              <div class="faq__item">
+                <button class="faq__question">Do I need prior experience to join?</button>
+                <div class="faq__answer">
+                  <p>No prior experience is required! We welcome students at all skill levels. Whether you're a complete beginner or an experienced coder, we have activities and projects suitable for you.</p>
+                </div>
+              </div>
+              <div class="faq__item">
+                <button class="faq__question">How often does the club meet?</button>
+                <div class="faq__answer">
+                  <p>We hold regular bi-weekly meetings, with additional workshops and events scheduled throughout the semester. The schedule is flexible to accommodate members' academic commitments.</p>
+                </div>
+              </div>
+              <div class="faq__item">
+                <button class="faq__question">Can I join if I'm not a computer engineering student?</button>
+                <div class="faq__answer">
+                  <p>Absolutely! While we're based in the Computer Engineering department, we welcome students from all majors who are interested in technology and innovation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cta">
+        <div class="container">
+          <div class="cta__content">
+            <h2 class="cta__title">Ready to Start Your Tech Journey?</h2>
+            <p class="cta__text">Join CEC CLUB today and become part of a vibrant community of innovators and problem solvers.</p><a class="btn btn--primary" href="#join">Join Now</a>
+          </div>
+        </div>
+      </section>
+      <script>
+        // Simple page routing to show/hide sections based on URL
+        document.addEventListener('DOMContentLoaded', function () {
+        
+          const faqQuestions = document.querySelectorAll('.faq-question');
+          if (faqQuestions) {
+            faqQuestions.forEach(question => {
+              question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('active');
+              });
+            });
+          }
+        
+        
+          const joinForm = document.querySelector('.join-form .form');
+          if (joinForm) {
+            joinForm.addEventListener('submit', function (e) {
+              e.preventDefault();
+              alert('Thank you for your application! We will review it and get back to you soon.');
+              this.reset();
+            });
+          }
+        });
+      </script>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__brand"><a class="footer__logo" href="/"><span class="footer__logo-text">CEC</span><span class="footer__logo-text footer__logo-text--light">CLUB</span></a>
+            <p class="footer__tagline">Technology we love it, live it, share it</p>
+            <div class="footer__social"><a class="footer__social-link" href="#" aria-label="Twitter"><i class="icon-twitter"></i></a><a class="footer__social-link" href="#" aria-label="GitHub"><i class="icon-github"></i></a><a class="footer__social-link" href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a><a class="footer__social-link" href="#" aria-label="Discord"><i class="icon-discord"></i></a></div>
+          </div>
+          <div class="footer__column">
+            <h4 class="footer__heading">Quick Links</h4>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__link" href="/">Home</a></li>
+              <li class="footer__item"><a class="footer__link" href="/about">About Us</a></li>
+              <li class="footer__item"><a class="footer__link" href="/events">Events</a></li>
+              <li class="footer__item"><a class="footer__link" href="/projects">Projects</a></li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h4 class="footer__heading">Resources</h4>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__link" href="/blog">Blog</a></li>
+              <li class="footer__item"><a class="footer__link" href="/resources">Resources</a></li>
+              <li class="footer__item"><a class="footer__link" href="/join">Join Us</a></li>
+              <li class="footer__item"><a class="footer__link" href="/faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h4 class="footer__heading">Contact</h4>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__link" href="mailto:computer.engineering.ensab22@gmail.com"> <i class="icon-email"></i>computer.engineering.ensab22@gmail.com</a></li>
+              <li class="footer__item"><a class="footer__link" href="tel:+0612345678"> <i class="icon-phone"></i>(+212) 612345678</a></li>
+              <li class="footer__item">
+                <address class="footer__address"><i class="icon-location"></i>ENSA Berrechid Campus,<br>B.P :218, Avenue de l'université, Berrechid</address>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">© 2025 Ignite Tech Hub. All rights reserved.</p>
+          <div class="footer__legal"><a class="footer__legal-link" href="/privacy">Privacy Policy</a><span class="footer__legal-separator">|</span><a class="footer__legal-link" href="/terms">Terms of Service</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script type="module" src="./js/api-integration.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#ffd60a" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: true },
+            size: { value: 3, random: true },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ffd60a",
+              opacity: 0.4,
+              width: 1
+            },
+            move: {
+              enable: true,
+              speed: 2,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false
+            }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: { enable: true, mode: "repulse" },
+              onclick: { enable: true, mode: "push" },
+              resize: true
+            }
+          },
+          retina_detect: true
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -25,27 +25,55 @@
       </div>
     </header>
     <main>
-      <section class="hero">
-        <div class="hero__overlay"></div>
-        <div class="hero__particles" id="particles-js"></div>
-        <div class="hero__content">
-          <div class="container">
-            <h1 class="hero__title animate-in">
-               Welcome to <span class="hero__title-highlight">CEC Club!</span></h1>
-            <p class="hero__subtitle animate-in">Your hub for technology, innovation, and collaboration.</p>
-            <div class="hero__stats animate-in">
-              <div class="hero__stat"><span class="hero__stat-number">50+</span>
-                <p class="hero__stat-text">Members</p>
+      <section class="page-header">
+        <div class="container">
+          <h1 class="page-header__title">Contact Us</h1>
+          <p class="page-header__subtitle">We'd love to hear from you! Reach out with any questions, ideas, or just to say hello.</p>
+        </div>
+      </section>
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-section__grid">
+            <div class="contact-section__info">
+              <h2 class="contact-section__info-title">Get in Touch</h2>
+              <p>If you have any inquiries or want to collaborate, please don't hesitate to contact us through the form or using the details below.</p>
+              <div class="contact-details">
+                <div class="contact-details__item"><i class="fas fa-map-marker-alt"> </i><span>ENSA Berrechid, Km 5, Route de Casablanca BP 26100, Berrechid, Morocco</span></div>
+                <div class="contact-details__item"><i class="fas fa-envelope"></i><a href="mailto:contact@cecclub.com">contact@cecclub.com</a></div>
+                <div class="contact-details__item"><i class="fas fa-phone"></i><a href="tel:+212000000000">+212 (0)00 000 000 </a></div>
               </div>
-              <div class="hero__stat"><span class="hero__stat-number">20+</span>
-                <p class="hero__stat-text">Projects</p>
-              </div>
-              <div class="hero__stat"><span class="hero__stat-number">15+</span>
-                <p class="hero__stat-text">Events</p>
-              </div>
+              <h3 class="contact-section__info-subtitle">Follow Us</h3>
+              <div class="contact-socials"><a class="contact-socials__link" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a class="contact-socials__link" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a class="contact-socials__link" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a><a class="contact-socials__link" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div>
+            </div>
+            <div class="contact-section__form-container">
+              <h2 class="contact-section__form-title">Send Us a Message</h2>
+              <form class="contact-form" action="#" method="POST"> 
+                <div class="form-group">
+                  <label class="form-label" for="name">Full Name</label>
+                  <input class="form-control" type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address</label>
+                  <input class="form-control" type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="subject">Subject</label>
+                  <input class="form-control" type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="message">Message</label>
+                  <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button class="btn btn--primary contact-form__btn" type="submit">Send Message</button>
+              </form>
             </div>
           </div>
         </div>
+        <section class="map-section">
+          <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.5092818887636!2d-7.5865997!3d33.2583511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda63ce6a6c999b5%3A0x9823260201eae931!2sNational%20School%20of%20applied%20sciences_BERRECHID!5e0!3m2!1sen!2sma!4v1715288487177!5m2!1sen!2sma" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </section>
       </section>
     </main>
     <footer class="footer">
