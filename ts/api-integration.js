@@ -5,7 +5,7 @@
 import { addProjectStyles, ProjectsManager } from './project-card.js';
 import { EventsManager, addEventStyles } from './event-card.js';
 import { renderCards } from "./team-card.js";
-const backend_endpoint = 'http://162.243.168.223/';
+const backend_endpoint = 'http://127.0.0.1:8000';
 // Example data (in a real application, this would come from an API or database)
 const sampleProjects = [
     {

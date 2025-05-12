@@ -165,10 +165,9 @@
         </div>
       </section>
       <script>
-        // Simple page routing to show/hide sections based on URL
         document.addEventListener('DOMContentLoaded', function () {
-        
-          const faqQuestions = document.querySelectorAll('.faq-question');
+          // FAQ accordion functionality
+          const faqQuestions = document.querySelectorAll('.faq__question');
           if (faqQuestions) {
             faqQuestions.forEach(question => {
               question.addEventListener('click', () => {
@@ -179,13 +178,37 @@
             });
           }
         
-        
-          const joinForm = document.querySelector('.join-form .form');
+          // Form submission handling
+          const joinForm = document.getElementById('joinForm');
           if (joinForm) {
             joinForm.addEventListener('submit', function (e) {
               e.preventDefault();
+        
+              // Collect form data
+              const formData = {
+                name: document.getElementById('join-name').value,
+                email: document.getElementById('join-email').value,
+                major: document.getElementById('join-major').value,
+                year: document.getElementById('join-year').value,
+                interests: [],
+                experience: document.getElementById('join-experience').value,
+                motivation: document.getElementById('join-motivation').value
+              };
+        
+              // Get checked interests
+              const interestCheckboxes = document.querySelectorAll('input[name="interests"]:checked');
+              interestCheckboxes.forEach(checkbox => {
+                formData.interests.push(checkbox.value);
+              });
+        
+              // Log the form data to console
+              console.log('Form submission data:', formData);
+        
+              // Show success message
               alert('Thank you for your application! We will review it and get back to you soon.');
-              this.reset();
+        
+              // Reset the form
+              // this.reset();
             });
           }
         });
