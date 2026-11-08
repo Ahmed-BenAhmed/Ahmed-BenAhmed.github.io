@@ -1,0 +1,69 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Fetch milestones data from external JSON file
+    fetch('../../instagram_posts_data.json')
+        .then(response => response.json())
+        .then(milestonesData => {
+            const milestonesTrack = document.getElementById("milestones-track");
+            const prevButton = document.querySelector(".carousel-button--prev");
+            const nextButton = document.querySelector(".carousel-button--next");
+            let currentIndex = 0;
+
+            function createMilestoneCard(milestone) {
+                const carouselItem = document.createElement("div");
+                carouselItem.classList.add("carousel-item");
+
+                const img = document.createElement("img");
+                img.src = milestone.image_url;
+                img.alt = milestone.caption;
+                carouselItem.appendChild(img);
+
+                const caption = document.createElement("p");
+                caption.classList.add("carousel-item__caption");
+                caption.textContent = milestone.caption;
+                carouselItem.appendChild(caption);
+
+                if (milestone.timestamp) {
+                    const timestamp = document.createElement("p");
+                    timestamp.classList.add("carousel-item__timestamp");
+                    timestamp.textContent = milestone.timestamp;
+                    carouselItem.appendChild(timestamp);
+                }
+
+                return carouselItem;
+            }
+
+            function renderMilestones() {
+                milestonesTrack.innerHTML = "";
+                milestonesData.forEach(milestone => {
+                    milestonesTrack.appendChild(createMilestoneCard(milestone));
+                });
+                updateCarousel();
+            }
+
+            function updateCarousel() {
+                const itemWidth = milestonesTrack.children[0].offsetWidth;
+                milestonesTrack.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+            }
+
+            prevButton.addEventListener("click", () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : milestonesData.length - 1;
+                updateCarousel();
+            });
+
+            nextButton.addEventListener("click", () => {
+                currentIndex = (currentIndex < milestonesData.length - 1) ? currentIndex + 1 : 0;
+                updateCarousel();
+            });
+
+            // Initial render
+            renderMilestones();
+
+            // Update carousel on window resize
+            window.addEventListener("resize", updateCarousel);
+        })
+        .catch(error => {
+            console.error("Failed to load milestones data:", error);
+        });
+});
+
+
